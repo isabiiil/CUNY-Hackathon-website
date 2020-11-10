@@ -13,6 +13,10 @@ p {
   text-align: justify;
 }
 
+a {
+  text-decoration: none;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -23,7 +27,7 @@ p {
   background: #00FE9D;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #CF2A6B;
+  background: #FCEC00;
 }
 
 .section {
@@ -50,6 +54,24 @@ p {
 
 #about {
   background-color: #000B54;
+}
+
+#about-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  padding: 1vh 3vw;
+  margin: 0 auto;
+  max-width: 14vw;
+  height: auto;
+  border-radius: 10px;
+  background-color: #FCEC00;
+  color: #000;
 }
 
 #themes {
@@ -112,10 +134,9 @@ p {
   display: block;
   font-size: 2.5rem;
   font-weight: 500;
-  padding: 0.9rem 1.8rem;
+  padding: 0.9rem 4.5rem 0.9rem 1.8rem;
   color: #00FE9D;
   position: relative;
-  text-decoration: none;
 }
 
 .collapse a:before {
@@ -136,6 +157,7 @@ p {
   max-height: 0em;
   transition: 0.3s linear 0s;
   overflow: auto;
+  font-size: 1.1vw;
 }
 
 .collapse + .collapse a {
@@ -170,5 +192,9 @@ p {
     color: #000;
     border-radius: 20px;
     font-weight: bold;
+  }
+
+  .content {
+    font-size: 3vw;
   }
 }
