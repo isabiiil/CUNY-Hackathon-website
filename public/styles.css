@@ -1,0 +1,174 @@
+@import url(https://use.typekit.net/sxg7zok.css);
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  font-family: 'Montserrat';
+}
+
+p {
+  font-size: 1.5vw;
+  line-height: 2.5vw;
+  text-align: justify;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: lightslategray;
+}
+::-webkit-scrollbar-thumb {
+  background: #00FE9D;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #CF2A6B;
+}
+
+.section {
+  /* max-height: 100vh; */
+  /* max-width: 100vw; */
+  color: #fff;
+}
+
+.textbox {
+  width: 50%;
+  padding: 5% 25%;
+}
+
+#landing {
+  background-color: #441AE7;
+  height: 100vh;
+}
+
+#landing-image {
+  height: 80%;
+  width: 80%;
+  margin: 5% 10%;
+}
+
+#about {
+  background-color: #000B54;
+}
+
+#themes {
+  background-color: #441AE7;
+}
+
+#theme-cards {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.card {
+  width: 12vw;
+  height: 32vh;
+  margin: 1vw;
+  padding: 1vw;
+  background-color: #00FE9D;
+  color: #000;
+  border-radius: 20px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card p {
+  margin: -4vh 0;
+}
+
+.card:hover {
+  transform: scale(1.08);
+  transition-duration: 0.5s;
+}
+
+#faq {
+  background-color: #000B54;
+}
+
+.transition, p, ul li i:before, ul li i:after {
+  transition: all 0.25s ease-in-out;
+}
+
+.flipIn, h1, ul li {
+  animation: flipdown 0.5s ease both;
+}
+
+.no-select, h2 {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.collapse a {
+  display: block;
+  font-size: 2.5rem;
+  font-weight: 500;
+  padding: 0.9rem 1.8rem;
+  color: #00FE9D;
+  position: relative;
+  text-decoration: none;
+}
+
+.collapse a:before {
+  content: "";
+  border-top: 7px solid #00FE9D;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  position: absolute;
+  top: 25px;
+  right: 30px;
+}
+
+.inner-content {
+  padding: 1.8rem;
+}
+
+.content {
+  max-height: 0em;
+  transition: 0.3s linear 0s;
+  overflow: auto;
+}
+
+.collapse + .collapse a {
+  border-top: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.collapse:target .content {
+  max-height: 15em;
+}
+
+.collapse:target a:before {
+  transform: rotate(-90deg);
+}
+
+@media screen and (max-width: 512px) {
+  p {
+    font-size: 4vw;
+    line-height: 6vw;
+  }
+
+  .textbox {
+    width: 70%;
+    padding: 10% 15%;
+  }
+
+  .card {
+    width: 50%;
+    height: 24vh;
+    margin: 4vw;
+    padding: 8vw;
+    background-color: #00FE9D;
+    color: #000;
+    border-radius: 20px;
+    font-weight: bold;
+  }
+}
