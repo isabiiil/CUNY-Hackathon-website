@@ -178,6 +178,19 @@ a {
     line-height: 6vw;
   }
 
+  #landing {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+  }
+
+  #landing-image {
+    height: 30%;
+    width: 90%;
+    margin: 5%;
+  }
+
   .textbox {
     width: 70%;
     padding: 10% 15%;
