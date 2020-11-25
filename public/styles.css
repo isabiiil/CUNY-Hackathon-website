@@ -13,12 +13,13 @@ p {
   text-align: justify;
 }
 
-a {
+a:link, a:focus, a:hover, a:visited {
   text-decoration: none;
+  color: black;
 }
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
   background: lightslategray;
@@ -62,11 +63,17 @@ a {
   justify-content: center;
 }
 
+#buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
 .button {
   display: flex;
   justify-content: center;
-  padding: 1vh 3vw;
-  margin: 0 auto;
+  padding: 0.5vh 1vw;
+  margin: 0 1vw;
   max-width: 14vw;
   height: auto;
   border-radius: 10px;
@@ -170,6 +177,18 @@ a {
 
 .collapse:target a:before {
   transform: rotate(-90deg);
+}
+
+#footer {
+  background-color: #441AE7;
+}
+
+#footer-content, #footer-content p {
+  text-align: center;
+}
+
+#footer a {
+  color: white;
 }
 
 @media screen and (max-width: 512px) {
