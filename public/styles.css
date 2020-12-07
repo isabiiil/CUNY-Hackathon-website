@@ -7,6 +7,12 @@ body {
   font-family: 'Montserrat';
 }
 
+h1 {
+  font-size: 3vw;
+  color: #000;
+  text-align: center;
+}
+
 p {
   font-size: 1.5vw;
   line-height: 2.5vw;
@@ -72,7 +78,7 @@ a:link, a:focus, a:hover, a:visited {
 .button {
   display: flex;
   justify-content: center;
-  padding: 0.5vh 1vw;
+  padding: 1vh 4vw;
   margin: 0 1vw;
   max-width: 14vw;
   height: auto;
@@ -187,6 +193,29 @@ a:link, a:focus, a:hover, a:visited {
   text-align: center;
 }
 
+.sponsors-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #000;
+}
+
+.sponsor-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.sponsor {
+  height: 10vh;
+  margin: 2vh 2vw;
+}
+
+.partner {
+  height: 7vh;
+  margin: 2vh 2vw;
+}
+
 #footer a {
   color: white;
 }
@@ -195,6 +224,10 @@ a:link, a:focus, a:hover, a:visited {
   p {
     font-size: 4vw;
     line-height: 6vw;
+  }
+
+  h1 {
+    font-size: 8vw;
   }
 
   #landing {
@@ -215,6 +248,15 @@ a:link, a:focus, a:hover, a:visited {
     padding: 10% 15%;
   }
 
+  #buttons {
+    flex-direction: column;
+  }
+
+  .button {
+    margin: 3vh auto;
+    max-width: 100vw;
+  }
+
   .card {
     width: 50%;
     height: 24vh;
@@ -228,5 +270,9 @@ a:link, a:focus, a:hover, a:visited {
 
   .content {
     font-size: 3vw;
+  }
+
+  .sponsor-row {
+    flex-direction: column;
   }
 }
