@@ -220,6 +220,10 @@ a:link, a:focus, a:hover, a:visited {
   color: white;
 }
 
+iframe {
+  margin: -4px 0px;
+}
+
 @media screen and (max-width: 512px) {
   p {
     font-size: 4vw;
