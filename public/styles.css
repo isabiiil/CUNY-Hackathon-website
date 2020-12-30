@@ -101,8 +101,8 @@ a:link, a:focus, a:hover, a:visited {
 }
 
 .card {
-  width: 12vw;
-  height: 32vh;
+  width: 10vw;
+  height: 24vh;
   margin: 1vw;
   padding: 1vw;
   background-color: #00FE9D;
@@ -116,115 +116,13 @@ a:link, a:focus, a:hover, a:visited {
 }
 
 .card p {
-  margin: -4vh 0;
+  margin: -2vh 0;
+  font-size: 1.2vw;
 }
 
-.card:hover {
+.button:hover {
   transform: scale(1.08);
   transition-duration: 0.5s;
-}
-
-#faq {
-  background-color: #000B54;
-}
-
-.transition, p, ul li i:before, ul li i:after {
-  transition: all 0.25s ease-in-out;
-}
-
-.flipIn, h1, ul li {
-  animation: flipdown 0.5s ease both;
-}
-
-.no-select, h2 {
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  -khtml-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-
-.collapse a {
-  display: block;
-  font-size: 2.5rem;
-  font-weight: 500;
-  padding: 0.9rem 4.5rem 0.9rem 1.8rem;
-  color: #00FE9D;
-  position: relative;
-}
-
-.collapse a:before {
-  content: "";
-  border-top: 7px solid #00FE9D;
-  border-left: 7px solid transparent;
-  border-right: 7px solid transparent;
-  position: absolute;
-  top: 25px;
-  right: 30px;
-}
-
-.inner-content {
-  padding: 1.8rem;
-}
-
-.content {
-  max-height: 0em;
-  transition: 0.3s linear 0s;
-  overflow: auto;
-  font-size: 1.1vw;
-}
-
-.collapse + .collapse a {
-  border-top: 1px solid rgba(255, 255, 255, 0.7);
-}
-
-.collapse:target .content {
-  max-height: 15em;
-}
-
-.collapse:target a:before {
-  transform: rotate(-90deg);
-}
-
-#footer {
-  background-color: #441AE7;
-}
-
-#footer-content, #footer-content p {
-  text-align: center;
-}
-
-.sponsors-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: #000;
-}
-
-.sponsor-row {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-.sponsor {
-  height: 10vh;
-  margin: 2vh 2vw;
-}
-
-.partner {
-  height: 7vh;
-  margin: 2vh 2vw;
-}
-
-#footer a {
-  color: white;
-}
-
-iframe {
-  margin: -4px 0px;
 }
 
 #schedule-content {
@@ -289,8 +187,114 @@ table td > span {
   background-color: #BCBCBC;
 }
 
+#faq, #old-faq {
+  background-color: #000B54;
+}
+
+.transition, p, ul li i:before, ul li i:after {
+  transition: all 0.25s ease-in-out;
+}
+
+.flipIn, h1, ul li {
+  animation: flipdown 0.5s ease both;
+}
+
+.no-select, h2 {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+#footer {
+  background-color: #441AE7;
+}
+
+#footer-content, #footer-content p {
+  text-align: center;
+}
+
+.sponsors-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #000;
+}
+
+.sponsor-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.sponsor {
+  height: 10vh;
+  margin: 2vh 2vw;
+}
+
+.partner {
+  height: 7vh;
+  margin: 2vh 2vw;
+}
+
+#footer a {
+  color: white;
+}
+
+iframe {
+  margin: -4px 0px;
+}
+
+.accordion {
+  color: #00FE9D;
+  cursor: pointer;
+  padding: 18px;
+  max-width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+  text-align: left;
+  outline: none;
+  transition: 0.4s;
+}
+
+.accordion p {
+  line-height: normal;
+  margin: 1vh 1vw;
+  max-width: 85%;
+}
+
+.accordion:after {
+  content: '\02795'; /* Unicode character for "plus" sign (+) */
+  font-size: 18px;
+  color: #777;
+  position: relative;
+  float: right;
+  bottom: 32px;
+}
+
+.active:after {
+  content: "\2796"; /* Unicode character for "minus" sign (-) */
+}
+
+.panel {
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  padding: 1.8rem;
+  display: none;
+  /* max-height: 0; */
+  overflow: hidden;
+  /* transition: max-height 0.2s ease-out; */
+}
+
+#mlh-coc {
+  color: #FFFFFF;
+  text-decoration: underline;
+}
+
 @media screen and (max-width: 512px) {
-  p {
+  p, .panel, .card p {
     font-size: 4vw;
     line-height: 6vw;
   }
@@ -337,7 +341,7 @@ table td > span {
     font-weight: bold;
   }
 
-  .content {
+  .panel {
     font-size: 3vw;
   }
 
@@ -345,7 +349,7 @@ table td > span {
     flex-direction: column;
     justify-content: center;
     padding: 1vh 1vw;
-    margin: 0 auto;
+    margin: 1vh 0.5vw;
   }
 
   #saturday, #sunday {
@@ -368,11 +372,13 @@ table td > span {
 
   .sponsor {
     max-width: 100%;
+    height: auto;
     margin: 2vh 0;
   }
   
   .partner {
     max-width: 100%;
+    height: auto;
     margin: 2vh 0;
   }
 }
