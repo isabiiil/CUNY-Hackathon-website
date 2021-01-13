@@ -240,6 +240,16 @@ table td > span {
   margin: 2vh 2vw;
 }
 
+#mufg-title {
+  font-size: 2.25vw;
+  color: #000;
+  text-align: center;
+}
+
+#mufg {
+  height: 30vh;
+}
+
 #footer a {
   color: white;
 }
@@ -301,6 +311,10 @@ iframe {
 
   h1 {
     font-size: 8vw;
+  }
+
+  #mufg-title {
+    font-size: 6vw;
   }
 
   #landing {
@@ -370,13 +384,7 @@ iframe {
     flex-direction: column;
   }
 
-  .sponsor {
-    max-width: 100%;
-    height: auto;
-    margin: 2vh 0;
-  }
-  
-  .partner {
+  .sponsor, .partner, #mufg {
     max-width: 100%;
     height: auto;
     margin: 2vh 0;
